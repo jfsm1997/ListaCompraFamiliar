@@ -1,0 +1,32 @@
+{
+  "name": "Usuario",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "apellidos": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "listaFamiliars": {
+      "type": "hasOne",
+      "model": "ListaFamiliar",
+      "foreignKey": ""
+    },
+    "listaFamiliar": {
+      "type": "belongsTo",
+      "model": "ListaFamiliar",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
