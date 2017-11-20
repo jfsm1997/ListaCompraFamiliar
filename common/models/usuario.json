@@ -16,13 +16,19 @@
   },
   "validations": [],
   "relations": {
-    "listaFamiliars": {
-      "type": "hasOne",
+   
+    "miembros": {
+      "type": "belongsTo",
       "model": "ListaFamiliar",
       "foreignKey": ""
     },
-    "listaFamiliar": {
-      "type": "belongsTo",
+    "Solicitud": {
+      "type": "hasAndBelongsToMany",
+      "model": "ListaFamiliar",
+      "foreignKey": ""
+    },
+    "Coordinador": {
+      "type": "hasOne",
       "model": "ListaFamiliar",
       "foreignKey": ""
     }

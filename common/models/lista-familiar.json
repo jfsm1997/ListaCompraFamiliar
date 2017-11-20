@@ -13,14 +13,25 @@
   },
   "validations": [],
   "relations": {
-    "usuarios": {
+    
+    "productos": {
+      "type": "hasMany",
+      "model": "Producto",
+      "foreignKey": ""
+    },
+    "miembros": {
       "type": "hasMany",
       "model": "Usuario",
       "foreignKey": ""
     },
-    "productos": {
-      "type": "hasMany",
-      "model": "Producto",
+    "Solicitud": {
+      "type": "hasAndBelongsToMany",
+      "model": "Usuario",
+      "foreignKey": ""
+    },
+    "Coordinador": {
+      "type": "belongsTo",
+      "model": "Usuario",
       "foreignKey": ""
     }
   },
