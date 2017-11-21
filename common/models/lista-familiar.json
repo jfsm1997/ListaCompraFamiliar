@@ -32,7 +32,7 @@
     "Coordinador": {
       "type": "belongsTo",
       "model": "Usuario",
-      "foreignKey": ""
+      "foreignKey": "CoordinadorId"
     }
   },
   "acls": [],

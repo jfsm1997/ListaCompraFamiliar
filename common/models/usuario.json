@@ -30,7 +30,7 @@
     "Coordinador": {
       "type": "hasOne",
       "model": "ListaFamiliar",
-      "foreignKey": ""
+      "foreignKey": "CoordinadorId"
     }
   },
   "acls": [],
