@@ -16,7 +16,6 @@
   },
   "validations": [],
   "relations": {
-   
     "miembros": {
       "type": "belongsTo",
       "model": "ListaFamiliar",

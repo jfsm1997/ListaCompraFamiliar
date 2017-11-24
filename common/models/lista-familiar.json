@@ -13,7 +13,6 @@
   },
   "validations": [],
   "relations": {
-    
     "productos": {
       "type": "hasMany",
       "model": "Producto",
@@ -36,5 +35,34 @@
     }
   },
   "acls": [],
-  "methods": {}
+  "methods": {
+    "prototype.solicitar": {
+      "accepts": [
+        {
+          "arg": "context",
+          "type": "object",
+          "required": true,
+          "description": "contexto",
+          "http": {
+            "source": "context"
+          }
+        }
+      ],
+      "returns": [
+        {
+          "arg": "solicitud",
+          "type": "object",
+          "root": true,
+          "description": "Solicitud"
+        }
+      ],
+      "description": "crea una solicitud",
+      "http": [
+        {
+          "path": "/solicitar",
+          "verb": "post"
+        }
+      ]
+    }
+  }
 }
