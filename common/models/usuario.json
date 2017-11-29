@@ -32,6 +32,43 @@
       "foreignKey": "CoordinadorId"
     }
   },
-  "acls": [],
-  "methods": {}
+  "acls": [
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "aceptarSolicitud"
+    }
+  ],
+  "methods": {
+    "prototype.aceptarSolicitud": {
+      "accepts": [
+        {
+          "arg": "context",
+          "type": "object",
+          "required": true,
+          "description": "contexto de la aplicacion",
+          "http": {
+            "source": "context"
+          }
+        }
+      ],
+      "returns": [
+        {
+          "arg": "array",
+          "type": "array",
+          "root": true,
+          "description": "array de vuelta"
+        }
+      ],
+      "description": "acepta la solicitud",
+      "http": [
+        {
+          "path": "/aceptarSolicitud",
+          "verb": "put"
+        }
+      ]
+    }
+  }
 }
