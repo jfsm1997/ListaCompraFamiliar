@@ -69,6 +69,34 @@
           "verb": "put"
         }
       ]
+    },
+    "prototype.rechazarSolicitud": {
+      "accepts": [
+        {
+          "arg": "context",
+          "type": "object",
+          "required": true,
+          "description": "contexto API",
+          "http": {
+            "source": "context"
+          }
+        }
+      ],
+      "returns": [
+        {
+          "arg": "array",
+          "type": "array",
+          "root": true,
+          "description": "lista de miembros"
+        }
+      ],
+      "description": "rechaza las solicitudes de un usuario",
+      "http": [
+        {
+          "path": "/rechazarSolicitudes",
+          "verb": "delete"
+        }
+      ]
     }
   }
 }
