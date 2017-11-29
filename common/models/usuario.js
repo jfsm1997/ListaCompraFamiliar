@@ -28,11 +28,11 @@ module.exports = function (Usuario) {
     Usuario.prototype.rechazarSolicitud = function (context, callback) {
         var listaFamiliarid;
         var usuarioSolicitante = this;
-
+            
         Usuario.findById(context.req.accessToken.userId, function (err, usuarioAutenticado) {
             if (err)
                 callback(err);
-            
+            listaFamiliarid = usuarioAutenticado.listaFamiliarId;
             usuarioSolicitante.Solicitud.remove(listaFamiliarid,
                     function (err) {
 
